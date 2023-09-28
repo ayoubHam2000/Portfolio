@@ -30,14 +30,15 @@ class Profile extends Service {
   skills : string[]
   address : IAddress
 
+
   constructor() {
     super()
     this.firstName = "Ayoub"
     this.lastName = "Ben Hamou"
     this.fullName = "Ayoub Ben Hamou"
-    this.github = "Github Link"
-    this.linkedin = "LinkedIn Link"
-    this.twitter = "Twitter Link"
+    this.github = "https://github.com/ayoubHam2000"
+    this.linkedin = "https://www.linkedin.com/in/ayoub-ben-hamou-2a3999224/"
+    this.twitter = "https://twitter.com/ayoubFox1337"
     this.phoneNumber = "+212 63 58 98 600"
     this.email = "ayoubbenhamou0731@gmail.com"
     this.address = {
@@ -137,6 +138,7 @@ class Profile extends Service {
       imagePath : PhotoTranscendenceMain,
       date : new Date("2020"),
       brief : "brief",
+      githubLink : "https://github.com/ayoubelhioui/ft_transcendence",
       categories : [
         EPCategory.Web,
         EPCategory.Rigor
@@ -162,6 +164,7 @@ class Profile extends Service {
       imagePath : PhotoCub3dMain,
       date : new Date("2020"),
       brief : "This project is inspired by the world-famous eponymous 90's game, which was the first FPS ever.",
+      githubLink : "https://github.com/ayoubHam2000/cub3d",
       categories : [
         EPCategory.Graphics,
         EPCategory.GameDev,
@@ -180,6 +183,7 @@ class Profile extends Service {
       imagePath : PhotoMiniShellMain,
       date : new Date("2020"),
       brief : "this project is about creating a simple shell.",
+      githubLink : "https://github.com/ayoubHam2000/minishell",
       categories : [
         EPCategory.Unix,
         EPCategory.Rigor,
@@ -198,6 +202,7 @@ class Profile extends Service {
       imagePath : PhotoContainerMain,
       date : new Date("2020"),
       brief : "Reimplement Vector, Map, Set and Stack of the c++98 standard library",
+      githubLink : "https://github.com/ayoubHam2000/ft_containers",
       categories : [
         EPCategory.ObjectOrientedProgramming,
         EPCategory.Rigor,

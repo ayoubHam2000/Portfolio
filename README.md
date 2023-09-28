@@ -30,7 +30,13 @@ If you are developing a production application, we recommend updating the config
 
 
 
-I placed an order for an adapter on Amazon on September 11th, but as of today, I still haven't received it. I attempted to contact UPS regarding the delivery, but unfortunately, I haven't received any response from them. To my dismay, when I checked the tracking information, the last status read, "The parcel is undeliverable and is in the process of being disposed of according to local guidelines."
+WebServer
+PhotoFamily
+Philoshpher
+FireBall
+KioskApp
+EnglishByText
+NetPractice
+Inception
 
-
-I've already spoken with customer service over the past two days, and they advised me to wait until the 28th of this month. However, I haven't received any updates from UPS yet. What should I do now, considering I won't be able to receive the product? The customer service also mentioned that I would receive a refund if the product isn't delivered.
+Other
