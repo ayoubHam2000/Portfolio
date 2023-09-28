@@ -1,29 +1,29 @@
-import { useState } from 'react'
 import { useProfileService } from '../../Service/ProfileService'
-import { EState } from '../../enums/event-state.enum'
 import ListProjects from './ListProject'
 import { EProjects } from '../../enums/project-list.enum'
-
-
+import { useParams } from 'react-router-dom'
+import { IProject } from '../../interfaces/project.interface'
 
 
 const Projects = () => {
   const projectService = useProfileService()
-  const selectedProject = projectService.getSelectedProject()
+  const params = useParams();
+  const projectName = params.projectName
+  const projectItem = projectService.projects.find((item : IProject) => item.title === projectName)
 
-  projectService.on(EState.ProjectListChange, useState()[1]).effect()
-
-  
-  return (
+  if (!projectItem) {
+    return <ListProjects/>
+  } else {
+    return (
     <>
-      {selectedProject === EProjects.All && <ListProjects/>}
-      {selectedProject === EProjects.MiniShell && <div> minishell </div>}
-      {selectedProject === EProjects.Cub3d && <div> Cub3d </div>}
-      {selectedProject === EProjects.Container && <div> Container </div>}
-      {selectedProject === EProjects.FT_Transcendence && <div> FT_Transcendence </div>}
-
+      {projectItem.id === EProjects.MiniShell && <div> Minishell </div>}
+      {projectItem.id === EProjects.Cub3d && <div> Cub3d </div>}
+      {projectItem.id === EProjects.Container && <div> Container </div>}
+      {projectItem.id === EProjects.FT_Transcendence && <div> FT_Transcendence </div>}
     </>
-  )
+    )
+  }
+  
 }
 
 export default Projects

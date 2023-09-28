@@ -71,21 +71,21 @@ const ListProjects = () => {
   }
 
   return (
-    <section className='py-5 sm:py-10 mt-5 sm:mt-10'>
+    <section className='py-5 sm:py-10 mt-5 sm:mt-10 px-36'>
       
-      <div className='text-center'>
-        <p className='font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light'> Projects </p>
+      <div className=''>
+        <p className='text-2xl sm:text-4xl mb-1 '> Projects </p>
       </div>
       <div className='mt-10 sm:mt-16'>
-        <h3 className='font-general-regular  text-center text-secondary-dark dark:text-ternary-light text-md sm:text-xl mb-3 '>
+        <h3 className='text-md sm:text-xl mb-3 '>
         Search projects by title or filter by category
         </h3>
       </div>
       
-      <div className='mt-6 flex-col lg:flex lg:justify-between border-b border-primary-light dark:border-secondary-dark pb-3 gap-3 items-center'>
+      <div className='mt-6 flex-col lg:flex lg:justify-between border-b border-color-primary pb-3 gap-3 items-center'>
         
         <div
-          className="mx-2 p-2.5 flex items-center rounded-md px-1 cursor-pointer bg-gray-700 text-white"
+          className="mx-2 p-2.5 flex items-center rounded-md px-1 cursor-pointer bg-color-primary-700 text-color-primary"
         >
           <IconSearch className="ml-1 text-lg"  />     
         
@@ -94,7 +94,7 @@ const ListProjects = () => {
             placeholder="Search"
             value={search.search}
             onChange={onInputChange}
-            className=" text-[15px] ml-4 caret-white w-full bg-transparent focus:outline-none "
+            className=" text-[15px] ml-4 w-full bg-transparent focus:outline-none "
           />
 
 
@@ -102,19 +102,19 @@ const ListProjects = () => {
 
         <div className='lg:flex flex-col gap-4 lg:flex-row-reverse'>
           <DropMenu
-            icon={createElement(IconCategory, {className : `grid place-content-center cursor-pointer hover:bg-gray-700 hover:rounded-md duration-200 p-1 text-3xl hover:scale-105`})}
+            icon={createElement(IconCategory, {className : `grid place-content-center cursor-pointer hover:bg-color-primary-700 hover:rounded-md duration-200 p-1 text-3xl hover:scale-105`})}
             list={listCategories}
             menuStyle={{width : "190px",height : "300px", right : "0px"}}
             callBack={changeCategory} />
             <div> {selectedCategory} </div>
           <DropMenu
-            icon={createElement(IconTool, {className : `grid place-content-center cursor-pointer hover:bg-gray-700 hover:rounded-md duration-200 p-1 text-3xl hover:scale-105`})}
+            icon={createElement(IconTool, {className : `grid place-content-center cursor-pointer hover:bg-color-primary-700 hover:rounded-md duration-200 p-1 text-3xl hover:scale-105`})}
             list={listTools}
             menuStyle={{width : "190px",height : "300px", right : "0px"}}
             callBack={changeTool} />
             <div> {selectedTool} </div>
           <DropMenu
-            icon={createElement(IconLanguage, {className : `grid place-content-center cursor-pointer hover:bg-gray-700 hover:rounded-md duration-200 p-1 text-3xl hover:scale-105`})}
+            icon={createElement(IconLanguage, {className : `grid place-content-center cursor-pointer hover:bg-color-primary-700 hover:rounded-md duration-200 p-1 text-3xl hover:scale-105`})}
             list={listLanguages}
             menuStyle={{width : "190px", height : "300px", right : "0px"}}
             callBack={changeLanguage} />

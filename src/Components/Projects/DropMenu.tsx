@@ -49,7 +49,7 @@ const DropMenu = ({icon, list, menuStyle, callBack} : IDropMenu) => {
           open &&
   
           <div className={`
-          absolute z-10 rounded-md bg-gray-700 shadow-lg focus:outline-none w-[180px] overflow-scroll`}
+          absolute z-10 rounded-md bg-color-primary-700 shadow-lg focus:outline-none w-[180px] overflow-scroll`}
           style={menuStyle}
           >
       
@@ -58,7 +58,7 @@ const DropMenu = ({icon, list, menuStyle, callBack} : IDropMenu) => {
                   
                   <a key={index} 
                   onClick={() => onItemClicked(index)}
-                  className={`block px-4 py-2 text-sm hover:bg-blue-800 cursor-pointer
+                  className={`block px-4 py-2 text-sm hover:bg-color-secondary-800 cursor-pointer
                   ${index === 0 ? "rounded-t-md" : ""}
                   ${index === lastItem ? "rounded-b-md" : ""}
                   `} >{item}</a>

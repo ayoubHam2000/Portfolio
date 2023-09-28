@@ -1,23 +1,25 @@
-import { useState } from "react"
-import { EMainPageState } from "../enums/main-page-state.enum"
 import Projects from "./Projects/Projects"
 import Nav from "./Nav/Nav"
 import Footer from "./Footer/Footer"
 import Home from "./Home/Home"
 import About from "./About/About"
 import Contact from "./Contact/Contact"
+import { Route, Routes } from "react-router-dom"
+import { Const } from "../Service/Const"
 
 
 const App = () => {
-  const [mainPageState, setMainPageState] = useState(EMainPageState.Home)
 
   return (
-    <main className="bg-gray-800 text-white w-screen min-h-screen ">
-      <Nav setMainPageState={setMainPageState}/>
-      {mainPageState === EMainPageState.Home && <Home setMainPageState={setMainPageState} />}
-      {mainPageState === EMainPageState.About && <About />}
-      {mainPageState === EMainPageState.Project && <Projects/>}
-      {mainPageState === EMainPageState.Contact && <Contact />}
+    <main className="bg-color-primary-800 text-color-primary w-screen min-h-screen ">
+      <Nav />
+      <Routes>
+        <Route path={Const.NavHome} element={<Home />}/>
+        <Route path={Const.NavAbout} element={<About />}/>
+        <Route path={Const.NavProjects} element={<Projects />}/>
+        <Route path={`${Const.NavProjects}/:projectName`} element={<Projects />}/>
+        <Route path={Const.NavContact} element={<Contact />}/>
+      </Routes>
       <Footer />
     </main>
   )

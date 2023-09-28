@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react"
-import { IconMoon, IconSun } from "../../assets/icons"
-import { EMainPageState } from "../../enums/main-page-state.enum"
+import { IconHamburger, IconMoon, IconSun } from "../../assets/icons"
 import { ETheme } from "../../enums/theme.enum"
 import { useProfileService } from "../../Service/ProfileService"
-import { EProjects } from "../../enums/project-list.enum"
+import { useLocation, useNavigate } from "react-router-dom"
 
-interface INav {
-  setMainPageState : React.Dispatch<React.SetStateAction<EMainPageState>>
-}
+
 
 
 const toggleDarkMode = () => {
@@ -37,44 +34,91 @@ const toggleDarkMode = () => {
   }
 }
 
-const Nav = ({setMainPageState} : INav) => {
-  const projectService = useProfileService()
+const Nav = () => {
+  const profileService = useProfileService()
+  const navigate = useNavigate()
   const {theme, toggle} = toggleDarkMode();
+  const navItems = profileService.navigationItems
+  const location = useLocation()
+  const [open, setOpen] = useState(false)
+  const [matches, setMatches] = useState(false);
+  const openStyle = open || matches ? {display : "block"} : {display : "none"}
 
-  const projectClick = () => {
-    projectService.setSelectedProject(EProjects.All)
-    setMainPageState(EMainPageState.Project)
+  const itemClicked = (to : string) => {
+    setOpen(false)
+    navigate(to)
   }
 
-  console.log(theme)
+  const getStyle = (itemName : string) => {
+    const selected = location.pathname.split("/")[1]
+    if (itemName === selected) {
+      return {fontWeight: "700", color : "rgb(59 130 246)"}
+    }
+    return {}
+  }
+
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+
+    const handleMediaChange = (event : any) => {
+      setOpen(false)
+      setMatches(event.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleMediaChange);
+
+    setMatches(mediaQuery.matches);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaChange);
+    };
+  }, []);
 
   return (
-    <section className="flex flex-row justify-between pt-5 items-center text-2xl">
-      <div className="font-bold  uppercase"> 
-        <span className=" bg-white text-black px-1 rounded-md">Ayoub</span> Ben Hamou </div>
-      <div className="">
-        <ul className="flex flex-row gap-8">
-          <li className=" cursor-pointer p-2 rounded-md px-6" 
-          onClick={() => setMainPageState(EMainPageState.Home)}
-          > Home </li>
-          <li className=" cursor-pointer p-2 rounded-md px-6" 
-          onClick={() => setMainPageState(EMainPageState.About)}
-          > About </li>
-          <li className=" cursor-pointer p-2 rounded-md px-6" 
-          onClick={() => projectClick()}
-          > Project </li>
-          <li className=" cursor-pointer p-2 rounded-md px-6" 
-          onClick={() => setMainPageState(EMainPageState.Contact)}
-          > Contact </li>
-        </ul>  
-      </div>
-      <div className="flex"> 
-        <div onClick={() => toggle()} className="p-3 bg-blue-800 rounded-md  hover:cursor-pointer hover:scale-105 hover:bg-blue-900">
-         {theme === ETheme.Dark && <IconSun />}
-         {theme === ETheme.Light && <IconMoon />}
+    
+    <nav className=" bg-white border-gray-200 dark:bg-gray-900">
+
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        
+        <div className="font-bold  uppercase order-1 text-[1.2em] md:text-[1em]"> 
+         <span className=" bg-black dark:bg-white text-white dark:text-black px-1 rounded-md">Ayoub</span> Ben Hamou 
         </div>
+        
+
+
+        <div style={openStyle} className="w-full md:block md:w-auto order-2 md:order-1">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+
+            {
+              navItems.map((itemName : string) => (
+                <li key={itemName} style={getStyle(itemName)} className="block py-2 pl-3 pr-4 cursor-pointer text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" 
+                onClick={() => itemClicked(itemName)}
+                > {itemName} </li>
+              ))
+            }
+
+          </ul>
+        </div>
+
+        <div className="flex flex-row gap-5 order-1 md:order-2 ">
+
+          <div className="flex"> 
+            <div onClick={() => toggle()} className="p-3 bg-color-secondary-800 text-white rounded-md  hover:cursor-pointer hover:scale-105 hover:bg-color-secondary-900">
+            {theme === ETheme.Dark && <IconSun />}
+            {theme === ETheme.Light && <IconMoon />}
+            </div>
+          </div>
+
+          <button onClick={() => setOpen(!open)} type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+              <IconHamburger />
+          </button>
+
+        </div>
+
       </div>
-    </section>
+    </nav>
+
   )
 }
 

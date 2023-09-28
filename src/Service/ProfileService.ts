@@ -1,65 +1,63 @@
 import { PhotoMe } from "../assets/images"
-import { EState } from "../enums/event-state.enum"
 import { EProjects } from "../enums/project-list.enum"
 import { EPCategory, EPLanguage, EPTool } from "../enums/project.enum"
 import { IAddress } from "../interfaces/address.interface"
 import { IEducation } from "../interfaces/education.interface"
 import { IProjectListItem } from "../interfaces/project-list-item.interface"
 import { IProject } from "../interfaces/project.interface"
+import { Const } from "./Const"
 import { Service } from "./Service"
 
 
 
 class Profile extends Service {
 
+  navigationItems : string[]
   firstName : string
   lastName : string
+  fullName : string
+  email : string
   github : string
   linkedin : string
   twitter : string
+  brief : string
   phoneNumber : string
   listCategories : IProjectListItem[]
   listTools : IProjectListItem[]
   listLanguages : IProjectListItem[]
   projects : IProject[]
   education : IEducation[]
+  skills : string[]
   address : IAddress
-  private selectedProject : EProjects
 
   constructor() {
     super()
     this.firstName = "Ayoub"
     this.lastName = "Ben Hamou"
+    this.fullName = "Ayoub Ben Hamou"
     this.github = "Github Link"
     this.linkedin = "LinkedIn Link"
     this.twitter = "Twitter Link"
     this.phoneNumber = "+212 63 58 98 600"
+    this.email = "ayoubbenhamou0731@gmail.com"
     this.address = {
       city : "Ouezzane",
       country : "Morocco",
-      fullAddress : "Full Address"
+      fullAddress : "Ouezzane, Morocco"
     }
+    this.brief = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis reprehenderit et laborum, rem, dolore eum quod voluptate exercitationem nobis, nihil esse debitis maxime facere minus sint delectus velit in eos quo officiis explicabo deleniti dignissimos. Eligendi illum libero dolorum cum laboriosam corrupti quidem, reiciendis ea magnam? Nulla, impedit fuga! "
  
+    this.navigationItems = [Const.NavHome, Const.NavAbout, Const.NavProjects, Const.NavContact]
     this.listCategories = []
     this.listTools = []
     this.listLanguages = []
     this.projects = this.constructProjects()
     this.education = this.constructEducation()
-    this.selectedProject = EProjects.All
+    this.skills = this.constructSkills()
 
     this.constructLists()
   }
 
-  getSelectedProject() {
-    return this.selectedProject
-  }
-
-  setSelectedProject(newValue : EProjects) {
-    if (newValue !== this.selectedProject) {
-      this.selectedProject = newValue
-      this.emit(EState.ProjectListChange)
-    }
-  }
 
   private constructLists() {
 
@@ -218,9 +216,45 @@ class Profile extends Service {
   }
 
   private constructEducation() : IEducation[] {
-    const list : IEducation[] = []
+    const list : IEducation[] = [
+      {
+        title : "1337 Future is Loading UM6P-42Network level:10.69",
+        name : "Digital Technology Architect | Oct 2019 - 2023",
+        items : [
+          "System Programming and advanced C / C++",
+          "Data Structures & Algorithms",
+          "DevOps"
+        ]
+      },
+      {
+        title : "1337 Future is Loading UM6P-42Network level:10.69",
+        name : "Digital Technology Architect | Oct 2019 - 2023",
+        items : [
+          "System Programming and advanced C / C++",
+          "Data Structures & Algorithms",
+          "DevOps"
+        ]
+      }
+    ]
 
     return list
+  }
+
+  private constructSkills() : string[] {
+    const skills : string[] = [
+      "Tensorflow / Pytorch / Scikit-learn",
+      "Pandas / Numpy / Matplotlib",
+      "Python / C / C++ / Java",
+      "FastApi / Pyspark / OpenCV",
+      "Docker / Kubernetes",
+      "AWS / AWS SageMaker",
+      "SQL(PostgreSQL) / PL/SQL",
+      "Socket Programming",
+      "Multithreading Programming",
+      "System Programming",
+      "Git / GitHub Actions",
+    ]
+    return skills
   }
 
 

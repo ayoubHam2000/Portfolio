@@ -9,7 +9,7 @@ import {
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='Portfolio'>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
