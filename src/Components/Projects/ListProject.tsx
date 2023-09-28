@@ -71,7 +71,7 @@ const ListProjects = () => {
   }
 
   return (
-    <section className='py-5 sm:py-10 mt-5 sm:mt-10 px-36'>
+    <section className='py-5 sm:py-10 mt-5 sm:mt-10 px-4 xl:px-36'>
       
       <div className=''>
         <p className='text-2xl sm:text-4xl mb-1 '> Projects </p>
@@ -82,7 +82,7 @@ const ListProjects = () => {
         </h3>
       </div>
       
-      <div className='mt-6 flex-col lg:flex lg:justify-between border-b border-color-primary pb-3 gap-3 items-center'>
+      <div className='mt-6 flex-col  border-b border-color-primary pb-3 gap-3 items-center'>
         
         <div
           className="mx-2 p-2.5 flex items-center rounded-md px-1 cursor-pointer bg-color-primary-700 text-color-primary"
@@ -100,30 +100,36 @@ const ListProjects = () => {
 
         </div>
 
-        <div className='lg:flex flex-col gap-4 lg:flex-row-reverse'>
-          <DropMenu
-            icon={createElement(IconCategory, {className : `grid place-content-center cursor-pointer hover:bg-color-primary-700 hover:rounded-md duration-200 p-1 text-3xl hover:scale-105`})}
-            list={listCategories}
-            menuStyle={{width : "190px",height : "300px", right : "0px"}}
-            callBack={changeCategory} />
-            <div> {selectedCategory} </div>
-          <DropMenu
-            icon={createElement(IconTool, {className : `grid place-content-center cursor-pointer hover:bg-color-primary-700 hover:rounded-md duration-200 p-1 text-3xl hover:scale-105`})}
-            list={listTools}
-            menuStyle={{width : "190px",height : "300px", right : "0px"}}
-            callBack={changeTool} />
-            <div> {selectedTool} </div>
-          <DropMenu
-            icon={createElement(IconLanguage, {className : `grid place-content-center cursor-pointer hover:bg-color-primary-700 hover:rounded-md duration-200 p-1 text-3xl hover:scale-105`})}
-            list={listLanguages}
-            menuStyle={{width : "190px", height : "300px", right : "0px"}}
-            callBack={changeLanguage} />
-            <div> {selectedLanguage} </div>
+        <div className='flex flex-col md:flex-row gap-4 justify-center items-center my-5'>
+          <div className='flex flex-col justify-start gap-4 items-center'>
+            <DropMenu
+              icon={createElement(IconCategory, {className : `grid place-content-center cursor-pointer hover:bg-color-primary-700 hover:rounded-md duration-200 p-1 text-3xl hover:scale-105`})}
+              list={listCategories}
+              menuStyle={{width : "190px",height : "300px", right : "0px"}}
+              callBack={changeCategory} />
+              <div> {selectedCategory} </div>
+          </div>
+          <div className='flex flex-col justify-start gap-4 items-center'>
+            <DropMenu
+              icon={createElement(IconTool, {className : `grid place-content-center cursor-pointer hover:bg-color-primary-700 hover:rounded-md duration-200 p-1 text-3xl hover:scale-105`})}
+              list={listTools}
+              menuStyle={{width : "190px",height : "300px", right : "0px"}}
+              callBack={changeTool} />
+              <div> {selectedTool} </div>
+          </div>
+          <div className='flex flex-col justify-start gap-4 items-center'>
+            <DropMenu
+              icon={createElement(IconLanguage, {className : `grid place-content-center cursor-pointer hover:bg-color-primary-700 hover:rounded-md duration-200 p-1 text-3xl hover:scale-105`})}
+              list={listLanguages}
+              menuStyle={{width : "190px", height : "300px", right : "0px"}}
+              callBack={changeLanguage} />
+              <div> {selectedLanguage} </div>
+          </div>
         </div>
             
       </div>
 
-      <div className='grid grid-cols-1  lg:grid-cols-3  mt-5 gap-8'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  mt-5 gap-8'>
         {
           listProject.map((item : IProject) => (
             <ProjectItem key={item.id} item={item}/>

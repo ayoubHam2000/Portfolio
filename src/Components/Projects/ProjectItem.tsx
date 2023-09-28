@@ -21,10 +21,10 @@ const ProjectItem = ({item} : {item : IProject}) => {
   return (
     <div style={{opacity: opacityCss}} onClick={itemClicked} className='transition-opacity duration-500 ease-in-out rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark'>
       <div>
-        <img className='rounded-t-xl border-none' src={item.imagePath} alt="Project Item" />
+        <img className='rounded-t-xl border-none bg-no-repeat' src={item.imagePath} alt="Project Item" />
       </div>
       <div className='px-4 py-6'>
-        <p className='text-lg md:text-xl   mb-2'>
+        <p className='text-lg md:text-xl text-center  mb-2'>
           {item.title}
         </p>
         <div className='flex flex-row justify-center flex-wrap'>

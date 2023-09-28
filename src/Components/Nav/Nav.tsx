@@ -3,6 +3,7 @@ import { IconHamburger, IconMoon, IconSun } from "../../assets/icons"
 import { ETheme } from "../../enums/theme.enum"
 import { useProfileService } from "../../Service/ProfileService"
 import { useLocation, useNavigate } from "react-router-dom"
+import { Const } from "../../Service/Const"
 
 
 
@@ -46,7 +47,7 @@ const Nav = () => {
 
   const itemClicked = (to : string) => {
     setOpen(false)
-    navigate(to)
+    navigate(`/${to}`)
   }
 
   const getStyle = (itemName : string) => {
@@ -57,6 +58,9 @@ const Nav = () => {
     return {}
   }
 
+  const logoClicked = () => {
+    navigate(`/${Const.NavHome}`)
+  }
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(min-width: 768px)');
@@ -81,7 +85,7 @@ const Nav = () => {
 
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         
-        <div className="font-bold  uppercase order-1 text-[1.2em] md:text-[1em]"> 
+        <div onClick={logoClicked} className="cursor-pointer font-bold  uppercase order-1 text-[1.2em] md:text-[1em]"> 
          <span className=" bg-black dark:bg-white text-white dark:text-black px-1 rounded-md">Ayoub</span> Ben Hamou 
         </div>
         
@@ -110,7 +114,7 @@ const Nav = () => {
             </div>
           </div>
 
-          <button onClick={() => setOpen(!open)} type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+          <button onClick={() => setOpen(!open)} type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-2xl  rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
               <IconHamburger />
           </button>
 

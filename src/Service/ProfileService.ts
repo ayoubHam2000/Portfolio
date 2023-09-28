@@ -1,4 +1,4 @@
-import { PhotoMe } from "../assets/images"
+import { PhotoContainerMain, PhotoCub3dMain, PhotoMe, PhotoMiniShellMain, PhotoTranscendenceMain } from "../assets/images"
 import { EProjects } from "../enums/project-list.enum"
 import { EPCategory, EPLanguage, EPTool } from "../enums/project.enum"
 import { IAddress } from "../interfaces/address.interface"
@@ -134,7 +134,7 @@ class Profile extends Service {
     {
       id : EProjects.FT_Transcendence,
       title : "ft_transcendence",
-      imagePath : PhotoMe,
+      imagePath : PhotoTranscendenceMain,
       date : new Date("2020"),
       brief : "brief",
       categories : [
@@ -159,7 +159,7 @@ class Profile extends Service {
     {
       id : EProjects.Cub3d,
       title : "Cub3d",
-      imagePath : PhotoMe,
+      imagePath : PhotoCub3dMain,
       date : new Date("2020"),
       brief : "This project is inspired by the world-famous eponymous 90's game, which was the first FPS ever.",
       categories : [
@@ -177,7 +177,7 @@ class Profile extends Service {
     {
       id : EProjects.MiniShell,
       title : "Minishell",
-      imagePath : PhotoMe,
+      imagePath : PhotoMiniShellMain,
       date : new Date("2020"),
       brief : "this project is about creating a simple shell.",
       categories : [
@@ -195,7 +195,7 @@ class Profile extends Service {
     {
       id : EProjects.Container,
       title : "Container",
-      imagePath : PhotoMe,
+      imagePath : PhotoContainerMain,
       date : new Date("2020"),
       brief : "Reimplement Vector, Map, Set and Stack of the c++98 standard library",
       categories : [

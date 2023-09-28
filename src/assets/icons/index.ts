@@ -1,6 +1,6 @@
 import {BiCodeAlt, BiLogoGmail, BiSolidCategory, BiSolidSun } from 'react-icons/bi'
-import {FaHamburger, FaMapMarkerAlt, FaMoon, FaPhoneAlt } from 'react-icons/fa'
-import {AiFillGithub, AiFillLinkedin, AiFillTool, AiOutlineSearch, AiOutlineTwitter } from 'react-icons/ai'
+import {FaMapMarkerAlt, FaMoon, FaPhoneAlt } from 'react-icons/fa'
+import {AiFillGithub, AiFillLinkedin, AiFillTool, AiOutlineAlignRight, AiOutlineSearch, AiOutlineTwitter } from 'react-icons/ai'
 
 export const IconSearch = AiOutlineSearch
 export const IconSun = BiSolidSun
@@ -14,5 +14,5 @@ export const IconTwitter = AiOutlineTwitter
 export const IconEmail = BiLogoGmail
 export const IconPhone = FaPhoneAlt
 export const IconAddress = FaMapMarkerAlt
-export const IconHamburger = FaHamburger
+export const IconHamburger = AiOutlineAlignRight
 

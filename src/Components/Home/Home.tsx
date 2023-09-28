@@ -18,13 +18,13 @@ const ListProjectPreview = () => {
   }
 
   return (
-    <div className='flex flex-col justify-center items-center px-36 '>
+    <div className='flex flex-col justify-center items-center px-4 xl:px-36 '>
     
-      <div className=''>
+      <div className='mt-6'>
         <p className='text-2xl sm:text-6xl mb-1 '> Projects </p>
       </div>
 
-     <div className='grid grid-cols-1  lg:grid-cols-3  mt-10 gap-8'>
+     <div className='grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3  mt-10 gap-8'>
         {
           listProject.map((item : IProject) => (
             <ProjectItem key={item.id} item={item}/>
@@ -50,9 +50,9 @@ const Home = () => {
 
   return (
     <div>
-      <div className='h-screen pt-5 flex flex-row justify-center items-center text-2xl gap-32 home_background mt-6'>
+      <div className='md:h-[650px] pt-5 flex flex-col lg:flex-row justify-center items-center text-2xl gap-32 home_background mt-6'>
         <div className=''>
-          <img className='bg-cover rounded-full' width={500} src={PhotoMe} alt='Profile Photo'/>
+          <img className='bg-cover rounded-full m-4 w-[300px] xl:w-[500px]' src={PhotoMe} alt='Profile Photo'/>
         </div>
         <div className='flex flex-col gap-7  justify-center items-center'>
           <div className='flex flex-col justify-center items-center p-4 px-8 text-white bg-gray-800 rounded-md bg-opacity-100 dark:bg-opacity-0'>

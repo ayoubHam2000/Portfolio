@@ -22,15 +22,15 @@ const Contact = () => {
       
       <div className="flex flex-col justify-center items-center text-2xl mt-10">
         <div className="border border-color-primary rounded-lg px-8 py-10 flex flex-col gap-10">
-          <div className="flex justify-start gap-8 items-center">
+          <div className="flex flex-col justify-center gap-8 items-center">
             <IconEmail />
             <a className="hover:text-blue-500 hover:scale-105 duration-300" href={`https://mail.google.com/mail/u/0/?fs=1&to=${profileService.email}&tf=cm`}> {profileService.email} </a>
           </div>
-          <div className="flex justify-start gap-8 items-center">
+          <div className="flex flex-col justify-center gap-8 items-center">
             <IconAddress />
             <a href="#"> {profileService.address.fullAddress} </a>
           </div>
-          <div className="flex justify-start gap-8 items-center">
+          <div className="flex flex-col justify-center gap-8 items-center">
             <IconPhone />
             <a href="#"> {profileService.phoneNumber} </a>
           </div>
