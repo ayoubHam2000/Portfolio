@@ -1,4 +1,4 @@
-import { PhotoContainerMain, PhotoCub3dMain, PhotoMe, PhotoMiniShellMain, PhotoTranscendenceMain } from "../assets/images"
+import { PhotoContainerMain, PhotoCub3dMain, PhotoMiniShellMain, PhotoTranscendenceMain } from "../assets/images"
 import { EProjects } from "../enums/project-list.enum"
 import { EPCategory, EPLanguage, EPTool } from "../enums/project.enum"
 import { IAddress } from "../interfaces/address.interface"

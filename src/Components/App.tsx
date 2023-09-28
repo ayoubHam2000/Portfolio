@@ -12,7 +12,6 @@ import { useEffect } from "react"
 const App = () => {
   const { pathname } = useLocation();
 
-  console.log(pathname)
 
   useEffect(() => {
     setTimeout(() => {
@@ -20,10 +19,13 @@ const App = () => {
     }, 100)
   }, [pathname]);
   
+  
+
   return (
     <main className="bg-color-primary-800 text-color-primary w-screen min-h-screen ">
       <Nav />
       <Routes>
+        <Route path="" element={<Home />}/>
         <Route path={Const.NavHome} element={<Home />}/>
         <Route path={Const.NavAbout} element={<About />}/>
         <Route path={Const.NavProjects} element={<Projects />}/>
