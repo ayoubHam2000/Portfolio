@@ -7,6 +7,7 @@ import Container from './Projects/Container'
 import Minishell from './Projects/Minishell'
 import Cub3d from './Projects/Cub3d'
 import FtTranscendence from './Projects/FtTranscendence'
+import AProject from './Projects/AProject'
 
 
 const Projects = () => {
@@ -26,6 +27,11 @@ const Projects = () => {
         {projectItem.id === EProjects.Cub3d && <Cub3d project={projectItem} /> }
         {projectItem.id === EProjects.Container && <Container project={projectItem} />  }
         {projectItem.id === EProjects.FT_Transcendence && <FtTranscendence project={projectItem} /> }
+        {projectItem.id === EProjects.WebServer && <AProject project={projectItem} /> }
+        {projectItem.id === EProjects.Philosophers && <AProject project={projectItem} /> }
+        {projectItem.id === EProjects.EnglishByText && <AProject project={projectItem} /> }
+        {projectItem.id === EProjects.NetPractice && <AProject project={projectItem} /> }
+        {projectItem.id === EProjects.Inception && <AProject project={projectItem} /> }
       </>
     )
   }

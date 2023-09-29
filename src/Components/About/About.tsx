@@ -26,13 +26,17 @@ const About = () => {
   const profileService = useProfileService()
   const education = profileService.education
   const skills = profileService.skills
-  const brief = profileService.brief
+  const brief = profileService.brief.split('\n')
 
   return (
   <div className="flex flex-col justify-center items-center text-2xl mt-10 gap-5">
     
     <img src={PhotoAbout} alt="Photo" className='w-[400px] md:w-[500px] bg-cover rounded-xl shadow-xl'/>
-    <div className='w-[80%] text-justify md:w-[50%] mt-5'> {brief} </div>
+    {
+      brief.map((item : string, index : number) => (
+        <div key={index} className='w-[80%] text-justify md:w-[50%] mt-5'> {item} </div>
+      ))
+    }
     
     <div className='text-[2em] my-32'> Education </div>
     {

@@ -1,0 +1,295 @@
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+
+
+
+
+
+
+
+%------------ CUSTOM COMMANDS -------------
+\newcommand{\bluetext}[1]{\textcolor{blue}{#1}}
+
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[2]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} \footnotesize{#2}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+
+
+
+
+
+
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Ayoub Ben Hamou} % Your Name
+\newcommand{\phone}{635898600} % Your Phone Number
+\newcommand{\site}{ayoubham2000.github.io/Portfolio} %Email 1
+\newcommand{\emailb}{ayoubbenhamou0731@gmail.com} %Email 2
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+
+\parbox{\dimexpr\linewidth-0.0cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +212-\phone}\\
+   & \href{https://ayoubham2000.github.io/Portfolio}{\raisebox{0.0\height}{\footnotesize \faGlobe}\ {\site}} \\
+   \textbf{Student at 1337 42 Network} &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+   &  \href{https://github.com/ayoubHam2000}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {github.com/ayoubHam2000}} \\
+   & \href{https://www.linkedin.com/in/ayoub-ben-hamou-2a3999224/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {www.linkedin.com/in/ayoub-ben-hamou-2a3999224}}
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+
+
+
+  \resumeProject
+  {Baccalaureate Science Math A 2018}
+
+  \resumeItemListStart
+    \item {Math, Physics}
+  \resumeItemListEnd
+  \vspace{-2mm}
+
+  \resumeProject
+  {Ibn Tofaïl University | Bachelor degree in Mathematics and Computer Science 2018-2021}
+
+  \resumeItemListStart
+    \item {Linear algebra, Numerical analysis, Calculus, and Operational research}
+    \item {C/C++, Java, SQL, UML}
+    \item {Unix ecosystem, Operating System, Multiprocessing programming}
+    \item {Web, Javascript, Networking}
+  \resumeItemListEnd
+  \vspace{-2mm}
+
+
+  \resumeProject
+  {Mohammed VI Polytechnic University – 1337 School | Digital Technology Architect Since 2021}
+
+  \resumeItemListStart
+    \item {Unix, System Programming and advanced C / C++}
+    \item {Data Structures \& Algorithms}
+    \item {Network System Administration}
+    \item {Graphics, DevOps}
+  \resumeItemListEnd
+  \vspace{-2mm}
+
+
+
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {Ft\_Transcendence}
+    
+    \resumeItemListStart
+      \item {A web application that enable real-time multiplayer PingPong matches in two modes 3D and 2D with the ability that allow communication between players through an integrated chat.}
+      \item {Technologies and tools : TypeScript, React, and Tailwind CSS on the front end, and NestJS on the back end, Socket.IO for real-time interactions and PostgreSQL for data storage.}
+      \item {This collaborative project fosters effective teamwork, making it possible to divide work, communicate, and discuss multiple solutions for a robust and enjoyable PingPong gaming platform.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      {Container}
+    
+    \resumeItemListStart
+      \item {This project is truly remarkable as it delves into numerous challenges of the C++ language, providing you with an exceptional opportunity to explore it in-depth, by reimplementing vector, map, set, stack containers from scratch, this project successfully recreates nearly all of the functionalities found in the C++98 STL counterparts.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+    {Inception}
+  
+    \resumeItemListStart
+      \item {This DevOps project involves the creation and configuration of multiple containers using a stable Debian operating system as the base image.}
+      \item {Delving into the world of Docker, Docker network management, and Docker volumes.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+
+    \resumeProject
+    {Cub3d}
+  
+    \resumeItemListStart
+      \item {3D game draws inspiration from the iconic first-person shooter game, Wolfenstein 3D. It introduces the concept of raycasting in computer graphics and strives to implement it using mathematical knowledge, including vectors and matrices.}
+      \item {Entirely coded in the C language and utilizes MiniLibX as a compact basic graphics library.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+
+    \resumeProject
+    {EnglishTextApp}
+  
+    \resumeItemListStart
+      \item {This Android app project centers on the creation and management of english words}
+      \item {It involves designing and working with layouts}
+      \item {The project also encompasses working with activities, fragments, and diverse UI components to provide a user-friendly experience. Additionally, a robust database is designed and built using SQLite to store and organize the word data efficiently.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+
+    \resumeProject
+    {Philosophers}
+  
+    \resumeItemListStart
+      \item {The Dining Philosophers Problem is an illustrative example of a common computing problem in concurrency.}
+      \item {Solving this problem by tow methodologies firstly, utilizing threads, and secondly, employing processes.}
+      \item {It has many concepts : Multiprocessing, Multithreading, Threads, Processes, Concurrency, Atomic operations, Interleavings, Parallelism, Semaphores, Mutexes, Race conditions, Data races.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+
+    \resumeProject
+    {WebServer}
+  
+    \resumeItemListStart
+      \item {Implementing an HTTP/1.1 WebServer from scratch using c++.}
+      \item {Engaging with the intricacies of low-level network programming.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+
+\resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+%-----------Technical skills-----------------
+\section{\textbf{Skills and Interests}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C, C++, Python, Typescript, Javascript, Kotlin, Java, Bash, SQL, PL/SQL, PHP} \\
+     \textbf{Tools, software \& frameworks}{: Numpy, Pandas, Git, GitHub Actions, Docker, PostgreSQL, MongoDB, NodeJs, NestJs, React, Tailwind} \\
+     \textbf{Soft Skills}{: Positivity, Problem-solving, Teamwork, Adaptability, Time management} \\
+     \textbf{Spoken languages}{: English, Arabic} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+%-------------------------------------------
+\end{document}

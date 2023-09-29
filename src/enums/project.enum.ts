@@ -10,7 +10,9 @@ export enum EPCategory {
   NetworkSystemAdministration,
   Algorithms,
   ObjectOrientedProgramming,
-  Graphics
+  Graphics,
+  DevOps,
+  Concurrency
 }
 
 export enum EPTool {
@@ -28,7 +30,8 @@ export enum EPTool {
   MongoDb,
   MariaDb,
   OrmPrisma,
-  OrmSql,
+  TypeORM,
+  Docker,
 }
 
 export enum EPLanguage {

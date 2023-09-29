@@ -1,4 +1,4 @@
-import { PhotoContainerMain, PhotoCub3dMain, PhotoMiniShellMain, PhotoTranscendenceMain } from "../assets/images"
+import { PhotoContainerMain, PhotoCub3dMain, PhotoEnglishByTextMain, PhotoInceptionMain, PhotoMiniShellMain, PhotoNetPracticeMain, PhotoPhilosophersMain, PhotoTranscendenceMain, PhotoWebServerMain } from "../assets/images"
 import { EProjects } from "../enums/project-list.enum"
 import { EPCategory, EPLanguage, EPTool } from "../enums/project.enum"
 import { IAddress } from "../interfaces/address.interface"
@@ -46,7 +46,7 @@ class Profile extends Service {
       country : "Morocco",
       fullAddress : "Ouezzane, Morocco"
     }
-    this.brief = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis reprehenderit et laborum, rem, dolore eum quod voluptate exercitationem nobis, nihil esse debitis maxime facere minus sint delectus velit in eos quo officiis explicabo deleniti dignissimos. Eligendi illum libero dolorum cum laboriosam corrupti quidem, reiciendis ea magnam? Nulla, impedit fuga! "
+    this.brief = "I am a dedicated and highly motivated graduate student with a strong academic background and a passion for Software Development. My experience spans the Unix ecosystem, web development, DevOps, and multiprocessing programming, where I have actively contributed to projects using C/C++, Python, Kotlin, and JavaScript. I am enthusiastic about seeking opportunities to enhance my skills, collaborate on exciting projects, and gain valuable real-world experience." + "\n I eagerly seek opportunities to expand my horizons, explore cutting-edge technologies, and engage in innovative projects. My goal is to not only enhance my own skills but also contribute meaningfully to the dynamic and ever-evolving field of software development."
  
     this.navigationItems = [Const.NavHome, Const.NavAbout, Const.NavProjects, Const.NavContact]
     this.listCategories = []
@@ -74,6 +74,8 @@ class Profile extends Service {
     this.listCategories.push({id: EPCategory.Algorithms, name: "Algorithms"})
     this.listCategories.push({id: EPCategory.ObjectOrientedProgramming, name: "Object-oriented programming"})
     this.listCategories.push({id: EPCategory.Graphics, name: "Graphics"})
+    this.listCategories.push({id: EPCategory.DevOps, name: "DevOps"})
+    this.listCategories.push({id: EPCategory.Concurrency, name: "Concurrency"})
 
     //FrameWord and Libraries and Tools
     this.listTools.push({id: EPTool.Unspecified, name: "All Tools"})
@@ -90,7 +92,8 @@ class Profile extends Service {
     this.listTools.push({id: EPTool.MongoDb, name: "MongoDb"})
     this.listTools.push({id: EPTool.MariaDb, name: "MariaDb"})
     this.listTools.push({id: EPTool.OrmPrisma, name: "Prisma ORM"})
-    this.listTools.push({id: EPTool.OrmSql, name: "SQL ORM"})
+    this.listTools.push({id: EPTool.TypeORM, name: "TypeORM"})
+    this.listTools.push({id: EPTool.Docker, name: "Docker"})
     
     //languages
     this.listLanguages.push({id: EPLanguage.Unspecified, name: "All Languages"})
@@ -134,7 +137,7 @@ class Profile extends Service {
     const list : IProject[] = [
     {
       id : EProjects.FT_Transcendence,
-      title : "ft_transcendence",
+      title : "Ft_Transcendence",
       imagePath : PhotoTranscendenceMain,
       date : new Date("2020"),
       brief : "brief",
@@ -149,7 +152,7 @@ class Profile extends Service {
         EPTool.Nest,
         EPTool.React,
         EPTool.Tailwind,
-        EPTool.OrmSql
+        EPTool.TypeORM
       ],
       languages : [
         EPLanguage.Css,
@@ -214,6 +217,98 @@ class Profile extends Service {
       languages : [
         EPLanguage.Cpp
       ],
+    },
+    {
+      id : EProjects.WebServer,
+      title : "WebServer",
+      imagePath : PhotoWebServerMain,
+      date : new Date("2020"),
+      brief : "Reimplement Vector, Map, Set and Stack of the c++98 standard library",
+      githubLink : "https://github.com/ayoubHam2000/web_server",
+      categories : [
+        EPCategory.ObjectOrientedProgramming,
+        EPCategory.Rigor,
+        EPCategory.Unix,
+        EPCategory.NetworkSystemAdministration
+      ],
+      tools : [
+
+      ],
+      languages : [
+        EPLanguage.Cpp
+      ],
+    },
+    {
+      id : EProjects.Philosophers,
+      title : "Philosophers",
+      imagePath : PhotoPhilosophersMain,
+      date : new Date("2020"),
+      brief : "Reimplement Vector, Map, Set and Stack of the c++98 standard library",
+      githubLink : "https://github.com/ayoubHam2000/philosophers",
+      categories : [
+        EPCategory.Unix,
+        EPCategory.Rigor,
+        EPCategory.Concurrency,
+        EPCategory.ImperativeProgramming,
+      ],
+      tools : [
+
+      ],
+      languages : [
+        EPLanguage.C
+      ],
+    },
+    {
+      id : EProjects.EnglishByText,
+      title : "EnglishByText",
+      imagePath : PhotoEnglishByTextMain,
+      date : new Date("2020"),
+      brief : "Reimplement Vector, Map, Set and Stack of the c++98 standard library",
+      githubLink : "https://github.com/ayoubHam2000/EnglishByText",
+      categories : [
+        EPCategory.Android
+      ],
+      tools : [
+
+      ],
+      languages : [
+        EPLanguage.kotlin,
+        EPLanguage.SQL
+      ],
+    },
+    {
+      id : EProjects.NetPractice,
+      title : "NetPractice",
+      imagePath : PhotoNetPracticeMain,
+      date : new Date("2020"),
+      brief : "Reimplement Vector, Map, Set and Stack of the c++98 standard library",
+      githubLink : "./",
+      categories : [
+        EPCategory.NetworkSystemAdministration,
+      ],
+      tools : [
+
+      ],
+      languages : [
+        
+      ],
+    },
+    {
+      id : EProjects.Inception,
+      title : "Inception",
+      imagePath : PhotoInceptionMain,
+      date : new Date("2020"),
+      brief : "Reimplement Vector, Map, Set and Stack of the c++98 standard library",
+      githubLink : "https://github.com/ayoubHam2000/Inception",
+      categories : [
+        EPCategory.NetworkSystemAdministration,
+        EPCategory.DevOps
+      ],
+      tools : [
+        EPTool.Docker
+      ],
+      languages : [
+      ],
     }
   ]
 
@@ -222,24 +317,37 @@ class Profile extends Service {
 
   private constructEducation() : IEducation[] {
     const list : IEducation[] = [
+
       {
-        title : "1337 Future is Loading UM6P-42Network level:10.69",
-        name : "Digital Technology Architect | Oct 2019 - 2023",
+        title : "1337 School",
+        name : "Mohammed VI Polytechnic University - 1337 School | Digital Technology Architect Since 2021",
         items : [
-          "System Programming and advanced C / C++",
+          "Unix, System Programming and advanced C / C++",
+          "Rigor",
           "Data Structures & Algorithms",
-          "DevOps"
+          "Object Oriented Programming",
+          "Network System Administration",
+          "Graphics",
+          "DevOps",
         ]
       },
       {
-        title : "1337 Future is Loading UM6P-42Network level:10.69",
-        name : "Digital Technology Architect | Oct 2019 - 2023",
+        title : "Ibn Tofaïl University",
+        name : "Bachelor degree in Mathematics and Computer Science 2018-2021",
         items : [
-          "System Programming and advanced C / C++",
-          "Data Structures & Algorithms",
-          "DevOps"
+          "C/C++, Java, SQL, UML",
+          "Unix ecosystem, Operating System, Multiprocessing programming",
+          "Web, Javascript, Networking", 
         ]
-      }
+      },
+      {
+        title : "Baccalaureate",
+        name : "Science Math A 2018",
+        items : [
+          "Math",
+          "Physics"
+        ]
+      },
     ]
 
     return list
@@ -247,17 +355,17 @@ class Profile extends Service {
 
   private constructSkills() : string[] {
     const skills : string[] = [
-      "Tensorflow / Pytorch / Scikit-learn",
-      "Pandas / Numpy / Matplotlib",
-      "Python / C / C++ / Java",
-      "FastApi / Pyspark / OpenCV",
-      "Docker / Kubernetes",
-      "AWS / AWS SageMaker",
-      "SQL(PostgreSQL) / PL/SQL",
+      "Pandas, Numpy, Matplotlib",
+      "Python, C, C++, Java",
+      "Docker",
+      "SQL(PostgreSQL), PL/SQL, MongoDB",
       "Socket Programming",
       "Multithreading Programming",
       "System Programming",
-      "Git / GitHub Actions",
+      "Git, GitHub Actions",
+      "Positivity, Problem-solving, Teamwork",
+      "Adaptability, Time management",
+      "NodeJs, NestJs, React, Tailwind"
     ]
     return skills
   }

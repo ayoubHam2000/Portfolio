@@ -61,7 +61,7 @@ const Home = () => {
           </div>
           <div className='flex flex-row gap-3 justify-between'>
             <a href={DocCv}> <button className='w-[220px] font-bold rounded-2xl border-color-secondary shadow border text-black bg-white py-3 px-4 hover:scale-105'> Download CV </button> </a>
-            <button className='w-[220px] font-bold rounded-2xl border-color-secondary shadow border text-color-primary-rev bg-color-secondary-800 px-4 py-3 hover:scale-105' onClick={contactClicked}> Contact </button>
+            <button className='w-[220px] font-bold rounded-2xl border-color-secondary shadow border text-white bg-color-secondary-800 px-4 py-3 hover:scale-105' onClick={contactClicked}> Contact </button>
           </div>
           <div>
           </div>
