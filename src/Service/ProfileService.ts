@@ -37,7 +37,7 @@ class Profile extends Service {
     this.lastName = "Ben Hamou"
     this.fullName = "Ayoub Ben Hamou"
     this.github = "https://github.com/ayoubHam2000"
-    this.linkedin = "https://www.linkedin.com/in/ayoub-ben-hamou-2a3999224/"
+    this.linkedin = "https://www.linkedin.com/in/ayoub-ben-hamou/"
     this.twitter = "https://twitter.com/ayoubFox1337"
     this.phoneNumber = "+212 63 58 98 600"
     this.email = "ayoubbenhamou0731@gmail.com"
@@ -140,7 +140,7 @@ class Profile extends Service {
       title : "Ft_Transcendence",
       imagePath : PhotoTranscendenceMain,
       date : new Date("2020"),
-      brief : "brief",
+      brief : "A web application that enable real-time multiplayer PingPong matches in two modes 3D and 2D with the ability that allow communication between players through an integrated chat.",
       githubLink : "https://github.com/ayoubelhioui/ft_transcendence",
       categories : [
         EPCategory.Web,
@@ -166,7 +166,7 @@ class Profile extends Service {
       title : "Cub3d",
       imagePath : PhotoCub3dMain,
       date : new Date("2020"),
-      brief : "This project is inspired by the world-famous eponymous 90's game, which was the first FPS ever.",
+      brief : "3D game draws inspiration from the iconic first-person shooter game, Wolfenstein 3D. \n It introduces the concept of raycasting in computer graphics and strives to implement it using mathematical knowledge, including vectors and matrices.",
       githubLink : "https://github.com/ayoubHam2000/cub3d",
       categories : [
         EPCategory.Graphics,
@@ -185,7 +185,7 @@ class Profile extends Service {
       title : "Minishell",
       imagePath : PhotoMiniShellMain,
       date : new Date("2020"),
-      brief : "this project is about creating a simple shell.",
+      brief : "This project is about creating a simple shell, It involves parsing the entire command and executing it, providing valuable insights into command-line operations and process management.",
       githubLink : "https://github.com/ayoubHam2000/minishell",
       categories : [
         EPCategory.Unix,
@@ -204,7 +204,7 @@ class Profile extends Service {
       title : "Container",
       imagePath : PhotoContainerMain,
       date : new Date("2020"),
-      brief : "Reimplement Vector, Map, Set and Stack of the c++98 standard library",
+      brief : "This project is truly remarkable as it delves into numerous challenges of the C++ language, providing you with an exceptional opportunity to explore it in-depth, by reimplementing vector, map, set, stack containers from scratch, this project successfully recreates nearly all of the functionalities found in the C++98 STL counterparts.",
       githubLink : "https://github.com/ayoubHam2000/ft_containers",
       categories : [
         EPCategory.ObjectOrientedProgramming,
@@ -223,7 +223,7 @@ class Profile extends Service {
       title : "WebServer",
       imagePath : PhotoWebServerMain,
       date : new Date("2020"),
-      brief : "Reimplement Vector, Map, Set and Stack of the c++98 standard library",
+      brief : "Implementing an HTTP/1.1 WebServer from scratch using c++.",
       githubLink : "https://github.com/ayoubHam2000/web_server",
       categories : [
         EPCategory.ObjectOrientedProgramming,
@@ -243,7 +243,7 @@ class Profile extends Service {
       title : "Philosophers",
       imagePath : PhotoPhilosophersMain,
       date : new Date("2020"),
-      brief : "Reimplement Vector, Map, Set and Stack of the c++98 standard library",
+      brief : "The Dining Philosophers Problem is an illustrative example of a common computing problem in concurrency.\nIt contains many concepts : Multiprocessing, Multithreading, Threads, Processes, Concurrency, Atomic operations, Interleavings, Parallelism, Semaphores, Mutexes, Race conditions, Data races.",
       githubLink : "https://github.com/ayoubHam2000/philosophers",
       categories : [
         EPCategory.Unix,
@@ -263,7 +263,7 @@ class Profile extends Service {
       title : "EnglishByText",
       imagePath : PhotoEnglishByTextMain,
       date : new Date("2020"),
-      brief : "Reimplement Vector, Map, Set and Stack of the c++98 standard library",
+      brief : "Android app project centers on the creation and management of english words. The project encompasses working with activities, fragments, and diverse UI components to provide a user-friendly experience.\nAdditionally, a robust database is designed and built using SQLite to store and organize the word data efficiently.",
       githubLink : "https://github.com/ayoubHam2000/EnglishByText",
       categories : [
         EPCategory.Android
@@ -281,7 +281,7 @@ class Profile extends Service {
       title : "NetPractice",
       imagePath : PhotoNetPracticeMain,
       date : new Date("2020"),
-      brief : "Reimplement Vector, Map, Set and Stack of the c++98 standard library",
+      brief : "Using a graphical simulator to interconnect different hosts, this project introduce the fundamentals of network management. By exploring the roles of routers, switches, and gaining insights into how IPv4 functions.",
       githubLink : "./",
       categories : [
         EPCategory.NetworkSystemAdministration,
@@ -298,7 +298,7 @@ class Profile extends Service {
       title : "Inception",
       imagePath : PhotoInceptionMain,
       date : new Date("2020"),
-      brief : "Reimplement Vector, Map, Set and Stack of the c++98 standard library",
+      brief : "This DevOps project involves the creation and configuration of multiple containers using a stable Debian operating system as the base image.",
       githubLink : "https://github.com/ayoubHam2000/Inception",
       categories : [
         EPCategory.NetworkSystemAdministration,
