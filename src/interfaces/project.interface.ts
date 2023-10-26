@@ -10,4 +10,5 @@ export interface IProject {
   brief : string,
   title : string,
   imagePath : string,
+  githubLink : string,
 }

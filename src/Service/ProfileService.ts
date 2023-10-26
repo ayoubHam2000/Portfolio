@@ -1,4 +1,4 @@
-import { PhotoContainerMain, PhotoCub3dMain, PhotoMe, PhotoMiniShellMain, PhotoTranscendenceMain } from "../assets/images"
+import { PhotoContainerMain, PhotoCub3dMain, PhotoEnglishByTextMain, PhotoInceptionMain, PhotoMiniShellMain, PhotoNetPracticeMain, PhotoPhilosophersMain, PhotoTranscendenceMain, PhotoWebServerMain } from "../assets/images"
 import { EProjects } from "../enums/project-list.enum"
 import { EPCategory, EPLanguage, EPTool } from "../enums/project.enum"
 import { IAddress } from "../interfaces/address.interface"
@@ -30,14 +30,15 @@ class Profile extends Service {
   skills : string[]
   address : IAddress
 
+
   constructor() {
     super()
     this.firstName = "Ayoub"
     this.lastName = "Ben Hamou"
     this.fullName = "Ayoub Ben Hamou"
-    this.github = "Github Link"
-    this.linkedin = "LinkedIn Link"
-    this.twitter = "Twitter Link"
+    this.github = "https://github.com/ayoubHam2000"
+    this.linkedin = "https://www.linkedin.com/in/ayoub-ben-hamou/"
+    this.twitter = "https://twitter.com/ayoubFox1337"
     this.phoneNumber = "+212 63 58 98 600"
     this.email = "ayoubbenhamou0731@gmail.com"
     this.address = {
@@ -45,7 +46,7 @@ class Profile extends Service {
       country : "Morocco",
       fullAddress : "Ouezzane, Morocco"
     }
-    this.brief = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis reprehenderit et laborum, rem, dolore eum quod voluptate exercitationem nobis, nihil esse debitis maxime facere minus sint delectus velit in eos quo officiis explicabo deleniti dignissimos. Eligendi illum libero dolorum cum laboriosam corrupti quidem, reiciendis ea magnam? Nulla, impedit fuga! "
+    this.brief = "I am a dedicated and highly motivated graduate student with a strong academic background and a passion for Software Development. My experience spans the Unix ecosystem, web development, DevOps, and multiprocessing programming, where I have actively contributed to projects using C/C++, Python, Kotlin, and JavaScript. I am enthusiastic about seeking opportunities to enhance my skills, collaborate on exciting projects, and gain valuable real-world experience." + "\n I eagerly seek opportunities to expand my horizons, explore cutting-edge technologies, and engage in innovative projects. My goal is to not only enhance my own skills but also contribute meaningfully to the dynamic and ever-evolving field of software development."
  
     this.navigationItems = [Const.NavHome, Const.NavAbout, Const.NavProjects, Const.NavContact]
     this.listCategories = []
@@ -73,6 +74,8 @@ class Profile extends Service {
     this.listCategories.push({id: EPCategory.Algorithms, name: "Algorithms"})
     this.listCategories.push({id: EPCategory.ObjectOrientedProgramming, name: "Object-oriented programming"})
     this.listCategories.push({id: EPCategory.Graphics, name: "Graphics"})
+    this.listCategories.push({id: EPCategory.DevOps, name: "DevOps"})
+    this.listCategories.push({id: EPCategory.Concurrency, name: "Concurrency"})
 
     //FrameWord and Libraries and Tools
     this.listTools.push({id: EPTool.Unspecified, name: "All Tools"})
@@ -89,7 +92,8 @@ class Profile extends Service {
     this.listTools.push({id: EPTool.MongoDb, name: "MongoDb"})
     this.listTools.push({id: EPTool.MariaDb, name: "MariaDb"})
     this.listTools.push({id: EPTool.OrmPrisma, name: "Prisma ORM"})
-    this.listTools.push({id: EPTool.OrmSql, name: "SQL ORM"})
+    this.listTools.push({id: EPTool.TypeORM, name: "TypeORM"})
+    this.listTools.push({id: EPTool.Docker, name: "Docker"})
     
     //languages
     this.listLanguages.push({id: EPLanguage.Unspecified, name: "All Languages"})
@@ -133,10 +137,11 @@ class Profile extends Service {
     const list : IProject[] = [
     {
       id : EProjects.FT_Transcendence,
-      title : "ft_transcendence",
+      title : "Ft_Transcendence",
       imagePath : PhotoTranscendenceMain,
       date : new Date("2020"),
-      brief : "brief",
+      brief : "A web application that enable real-time multiplayer PingPong matches in two modes 3D and 2D with the ability that allow communication between players through an integrated chat.",
+      githubLink : "https://github.com/ayoubelhioui/ft_transcendence",
       categories : [
         EPCategory.Web,
         EPCategory.Rigor
@@ -147,7 +152,7 @@ class Profile extends Service {
         EPTool.Nest,
         EPTool.React,
         EPTool.Tailwind,
-        EPTool.OrmSql
+        EPTool.TypeORM
       ],
       languages : [
         EPLanguage.Css,
@@ -161,7 +166,8 @@ class Profile extends Service {
       title : "Cub3d",
       imagePath : PhotoCub3dMain,
       date : new Date("2020"),
-      brief : "This project is inspired by the world-famous eponymous 90's game, which was the first FPS ever.",
+      brief : "3D game draws inspiration from the iconic first-person shooter game, Wolfenstein 3D. \n It introduces the concept of raycasting in computer graphics and strives to implement it using mathematical knowledge, including vectors and matrices.",
+      githubLink : "https://github.com/ayoubHam2000/cub3d",
       categories : [
         EPCategory.Graphics,
         EPCategory.GameDev,
@@ -179,7 +185,8 @@ class Profile extends Service {
       title : "Minishell",
       imagePath : PhotoMiniShellMain,
       date : new Date("2020"),
-      brief : "this project is about creating a simple shell.",
+      brief : "This project is about creating a simple shell, It involves parsing the entire command and executing it, providing valuable insights into command-line operations and process management.",
+      githubLink : "https://github.com/ayoubHam2000/minishell",
       categories : [
         EPCategory.Unix,
         EPCategory.Rigor,
@@ -197,7 +204,8 @@ class Profile extends Service {
       title : "Container",
       imagePath : PhotoContainerMain,
       date : new Date("2020"),
-      brief : "Reimplement Vector, Map, Set and Stack of the c++98 standard library",
+      brief : "This project is truly remarkable as it delves into numerous challenges of the C++ language, providing you with an exceptional opportunity to explore it in-depth, by reimplementing vector, map, set, stack containers from scratch, this project successfully recreates nearly all of the functionalities found in the C++98 STL counterparts.",
+      githubLink : "https://github.com/ayoubHam2000/ft_containers",
       categories : [
         EPCategory.ObjectOrientedProgramming,
         EPCategory.Rigor,
@@ -209,6 +217,98 @@ class Profile extends Service {
       languages : [
         EPLanguage.Cpp
       ],
+    },
+    {
+      id : EProjects.WebServer,
+      title : "WebServer",
+      imagePath : PhotoWebServerMain,
+      date : new Date("2020"),
+      brief : "Implementing an HTTP/1.1 WebServer from scratch using c++.",
+      githubLink : "https://github.com/ayoubHam2000/web_server",
+      categories : [
+        EPCategory.ObjectOrientedProgramming,
+        EPCategory.Rigor,
+        EPCategory.Unix,
+        EPCategory.NetworkSystemAdministration
+      ],
+      tools : [
+
+      ],
+      languages : [
+        EPLanguage.Cpp
+      ],
+    },
+    {
+      id : EProjects.Philosophers,
+      title : "Philosophers",
+      imagePath : PhotoPhilosophersMain,
+      date : new Date("2020"),
+      brief : "The Dining Philosophers Problem is an illustrative example of a common computing problem in concurrency.\nIt contains many concepts : Multiprocessing, Multithreading, Threads, Processes, Concurrency, Atomic operations, Interleavings, Parallelism, Semaphores, Mutexes, Race conditions, Data races.",
+      githubLink : "https://github.com/ayoubHam2000/philosophers",
+      categories : [
+        EPCategory.Unix,
+        EPCategory.Rigor,
+        EPCategory.Concurrency,
+        EPCategory.ImperativeProgramming,
+      ],
+      tools : [
+
+      ],
+      languages : [
+        EPLanguage.C
+      ],
+    },
+    {
+      id : EProjects.EnglishByText,
+      title : "EnglishByText",
+      imagePath : PhotoEnglishByTextMain,
+      date : new Date("2020"),
+      brief : "Android app project centers on the creation and management of english words. The project encompasses working with activities, fragments, and diverse UI components to provide a user-friendly experience.\nAdditionally, a robust database is designed and built using SQLite to store and organize the word data efficiently.",
+      githubLink : "https://github.com/ayoubHam2000/EnglishByText",
+      categories : [
+        EPCategory.Android
+      ],
+      tools : [
+
+      ],
+      languages : [
+        EPLanguage.kotlin,
+        EPLanguage.SQL
+      ],
+    },
+    {
+      id : EProjects.NetPractice,
+      title : "NetPractice",
+      imagePath : PhotoNetPracticeMain,
+      date : new Date("2020"),
+      brief : "Using a graphical simulator to interconnect different hosts, this project introduce the fundamentals of network management. By exploring the roles of routers, switches, and gaining insights into how IPv4 functions.",
+      githubLink : "./",
+      categories : [
+        EPCategory.NetworkSystemAdministration,
+      ],
+      tools : [
+
+      ],
+      languages : [
+        
+      ],
+    },
+    {
+      id : EProjects.Inception,
+      title : "Inception",
+      imagePath : PhotoInceptionMain,
+      date : new Date("2020"),
+      brief : "This DevOps project involves the creation and configuration of multiple containers using a stable Debian operating system as the base image.",
+      githubLink : "https://github.com/ayoubHam2000/Inception",
+      categories : [
+        EPCategory.NetworkSystemAdministration,
+        EPCategory.DevOps
+      ],
+      tools : [
+        EPTool.Docker
+      ],
+      languages : [
+      ],
     }
   ]
 
@@ -217,24 +317,37 @@ class Profile extends Service {
 
   private constructEducation() : IEducation[] {
     const list : IEducation[] = [
+
       {
-        title : "1337 Future is Loading UM6P-42Network level:10.69",
-        name : "Digital Technology Architect | Oct 2019 - 2023",
+        title : "1337 School",
+        name : "Mohammed VI Polytechnic University - 1337 School | Digital Technology Architect Since 2021",
         items : [
-          "System Programming and advanced C / C++",
+          "Unix, System Programming and advanced C / C++",
+          "Rigor",
           "Data Structures & Algorithms",
-          "DevOps"
+          "Object Oriented Programming",
+          "Network System Administration",
+          "Graphics",
+          "DevOps",
         ]
       },
       {
-        title : "1337 Future is Loading UM6P-42Network level:10.69",
-        name : "Digital Technology Architect | Oct 2019 - 2023",
+        title : "Ibn Tofaïl University",
+        name : "Bachelor degree in Mathematics and Computer Science 2018-2021",
         items : [
-          "System Programming and advanced C / C++",
-          "Data Structures & Algorithms",
-          "DevOps"
+          "C/C++, Java, SQL, UML",
+          "Unix ecosystem, Operating System, Multiprocessing programming",
+          "Web, Javascript, Networking", 
         ]
-      }
+      },
+      {
+        title : "Baccalaureate",
+        name : "Science Math A 2018",
+        items : [
+          "Math",
+          "Physics"
+        ]
+      },
     ]
 
     return list
@@ -242,17 +355,17 @@ class Profile extends Service {
 
   private constructSkills() : string[] {
     const skills : string[] = [
-      "Tensorflow / Pytorch / Scikit-learn",
-      "Pandas / Numpy / Matplotlib",
-      "Python / C / C++ / Java",
-      "FastApi / Pyspark / OpenCV",
-      "Docker / Kubernetes",
-      "AWS / AWS SageMaker",
-      "SQL(PostgreSQL) / PL/SQL",
+      "Pandas, Numpy, Matplotlib",
+      "Python, C, C++, Java",
+      "Docker",
+      "SQL(PostgreSQL), PL/SQL, MongoDB",
       "Socket Programming",
       "Multithreading Programming",
       "System Programming",
-      "Git / GitHub Actions",
+      "Git, GitHub Actions",
+      "Positivity, Problem-solving, Teamwork",
+      "Adaptability, Time management",
+      "NodeJs, NestJs, React, Tailwind"
     ]
     return skills
   }

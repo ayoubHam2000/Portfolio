@@ -9,12 +9,12 @@ import { Const } from "../../Service/Const"
 
 
 const toggleDarkMode = () => {
-  const colorTheme = localStorage.theme === "dark" ? ETheme.Dark : ETheme.Light;
+  const colorTheme = localStorage.theme === "light" ? ETheme.Light : ETheme.Dark;
   const [theme, setTheme] = useState(colorTheme);
 
   useEffect(() => {
       const root = window.document.documentElement;
-      const themeString = theme === ETheme.Dark ? "dark" : "light"
+      const themeString = theme === ETheme.Light ? "light" : "dark"
       root.classList.remove("dark");
       root.classList.remove("light");
       root.classList.add(themeString);

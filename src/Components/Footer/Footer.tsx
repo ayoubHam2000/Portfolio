@@ -12,8 +12,8 @@ const Footer = () => {
         </div>
         <div className='flex gap-20 my-4 text-[1.5em]' >
            <a className='rounded-lg text-color-primary hover:text-white primary bg-color-primary-700 hover:bg-color-secondary-700 hover:scale-105 shadow-sm p-4 duration-300' href={profileService.github}> <IconGithub/> </a> 
-           <a className='rounded-lg text-color-primary hover:text-white primary bg-color-primary-700 hover:bg-color-secondary-700 hover:scale-105 shadow-sm p-4 duration-300' href={profileService.github}> <IconTwitter/> </a> 
-           <a className='rounded-lg text-color-primary hover:text-white primary bg-color-primary-700 hover:bg-color-secondary-700 hover:scale-105 shadow-sm p-4 duration-300' href={profileService.github}> <IconLinkedin/> </a> 
+           <a className='rounded-lg text-color-primary hover:text-white primary bg-color-primary-700 hover:bg-color-secondary-700 hover:scale-105 shadow-sm p-4 duration-300' href={profileService.twitter}> <IconTwitter/> </a> 
+           <a className='rounded-lg text-color-primary hover:text-white primary bg-color-primary-700 hover:bg-color-secondary-700 hover:scale-105 shadow-sm p-4 duration-300' href={profileService.linkedin}> <IconLinkedin/> </a> 
         </div>
         <div className='flex flex-col xl:flex-row gap-2 xl:gap-20 roboto_font' >
           <div> {profileService.phoneNumber} </div>
