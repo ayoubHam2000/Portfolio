@@ -8,14 +8,14 @@ const Contact = () => {
     <section className='h-[700px] flex flex-col justify-center items-center py-5 sm:py-10 mt-5 sm:mt-10 px-36'>
       
       <div className=''>
-        <h3 className='sm:text-xl mb-3 '>
+        <h3 className='text-center whitespace-nowrap text-2xl sm:text-xl mb-3 '>
         Get in Touch
         </h3>
       </div>
       
 
       <div className=' mt-10 sm:mt-16'>
-        <p className='text-2xl sm:text-4xl mb-1  '> Contact Me </p>
+        <p className='text-center whitespace-nowrap text-4xl sm:text-4xl mb-1  '> Contact Me </p>
       </div>
       
      
@@ -24,11 +24,11 @@ const Contact = () => {
         <div className="border border-color-primary rounded-lg px-8 py-10 flex flex-col gap-10">
           <div className="flex flex-col justify-center gap-8 items-center">
             <IconEmail />
-            <a className="hover:text-blue-500 hover:scale-105 duration-300" href={`https://mail.google.com/mail/u/0/?fs=1&to=${profileService.email}&tf=cm`}> {profileService.email} </a>
+            <a className="hover:text-blue-500 hover:scale-105 duration-300 text-[0.8em] sm:text-[1em]" href={`https://mail.google.com/mail/u/0/?fs=1&to=${profileService.email}&tf=cm`}> {profileService.email} </a>
           </div>
           <div className="flex flex-col justify-center gap-8 items-center">
             <IconAddress />
-            <a href="#"> {profileService.address.fullAddress} </a>
+            <a href="#" className="text-[0.9em] sm:text-[1em]"> {profileService.address.fullAddress} </a>
           </div>
           <div className="flex flex-col justify-center gap-8 items-center">
             <IconPhone />
