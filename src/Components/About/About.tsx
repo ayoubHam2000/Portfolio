@@ -31,10 +31,10 @@ const About = () => {
   return (
   <div className="flex flex-col justify-center items-center text-2xl mt-10 gap-5">
     
-    <img src={PhotoAbout} alt="Photo" className='w-[400px] md:w-[500px] bg-cover rounded-xl shadow-xl'/>
+    <img src={PhotoAbout} alt="Photo" className='w-[300px] sm:w-[400px] md:w-[500px] bg-cover rounded-xl shadow-xl'/>
     {
       brief.map((item : string, index : number) => (
-        <div key={index} className='w-[80%] text-justify md:w-[50%] mt-5'> {item} </div>
+        <div key={index} className='w-[80%] text-justify text-[0.8em] sm:text-[1em] md:w-[50%] mt-5'> {item} </div>
       ))
     }
     
